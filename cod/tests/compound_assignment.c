@@ -5,8 +5,6 @@
 #include <assert.h>
 #include <stdio.h>
 
-static double testd(){return 1.0;}
-
 #ifdef NO_EMULATION
 #define GEN_PARSE_CONTEXT(x) \
 x = new_cod_parse_context();\

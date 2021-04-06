@@ -20,7 +20,6 @@ error_func(void *client_data, char *string)
 }
 
 static int verbose = 0;
-static int test_to_run = -1;
 
 int
 main(int argc, char **argv)
@@ -248,7 +247,7 @@ comment\n\
 	    int j;
 	    long k;
 	    short l;
-	} test_struct, *test_struct_p;
+	} *test_struct_p;
 
 	FMField struct_fields[] = {
 	    {"i", "integer", sizeof(int), FMOffset(test_struct_p, i)},
@@ -270,7 +269,7 @@ comment\n\
 	assert(ret == 0);
 	ret = cod_code_verify(code_string3, context);
 	assert(ret == 0);
-//	ret = cod_code_verify(code_string4, context);
+	ret = cod_code_verify(code_string4, context);
 	assert(ret == 0);
 	ret = cod_code_verify(code_string5, context);
 	assert(ret == 0);

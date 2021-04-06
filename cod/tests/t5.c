@@ -290,7 +290,6 @@ main(int argc, char **argv)
 	cod_parse_for_context(extern_string, context);
 
 	if (read_file) {
-	    FMFieldList fields = NULL;
 	    FMContext c = create_local_FMcontext();
 	    char *buf = read_buffer(c, read_file, test_num);
 	    param = (struct station_order *)buf;
