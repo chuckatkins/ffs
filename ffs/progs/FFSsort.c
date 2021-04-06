@@ -119,7 +119,6 @@ static char* templates[] = {
 static int
 generate_single_handler(FFSTypeHandle format, char *expression, func_table_entry *entry)
 {
-    char *format_name = NULL;
     char *prog = NULL;
     int i, j;
     FMFormat fmf = FMFormat_of_original(format);

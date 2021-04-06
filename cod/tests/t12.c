@@ -52,7 +52,6 @@ main(int argc, char **argv)
 	};
 	cod_parse_context context = new_cod_parse_context();
 	cod_code gen_code;
-	cod_exec_context ec;
 	long (*func)();
 	long result;
 
@@ -137,7 +136,6 @@ main(int argc, char **argv)
 	};
 	cod_parse_context context = new_cod_parse_context();
 	cod_code gen_code;
-	cod_exec_context ec;
 	long (*func)();
 	long result;
 

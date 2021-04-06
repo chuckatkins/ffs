@@ -25,12 +25,6 @@ write_buffer(char *filename, FMStructDescList desc, void *data,
              int test_num);
 extern char *read_buffer(FMContext c, char *read_file, int test_num);
 
-static int *
-dummy(int *p)
-{
-  return p;
-}
-
 static int count(cod_exec_context ec, long queue) {return queue;}
 static int discard(cod_exec_context ec, long queue, long index) {return queue + index;}
 
