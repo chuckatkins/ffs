@@ -120,7 +120,6 @@ main(int argc, char **argv)
 	cod_assoc_externs(context, externs);
 	cod_parse_for_context(extern_string, context);
 	if (read_file) {
-	    FMFieldList fields = NULL;
 	    FMContext c = create_local_FMcontext();
 	    char *buf = read_buffer(c, read_file, test_num);
 	    param = (test_struct*)buf;
@@ -193,7 +192,6 @@ main(int argc, char **argv)
 	cod_assoc_externs(context, externs);
 	cod_parse_for_context(extern_string, context);
 	if (read_file) {
-	    FMFieldList fields = NULL;
 	    FMContext c = create_local_FMcontext();
 	    char *buf = read_buffer(c, read_file, test_num);
 	    param = (test_struct*)buf;
@@ -263,7 +261,6 @@ main(int argc, char **argv)
 	cod_assoc_externs(context, externs);
 	cod_parse_for_context(extern_string, context);
 	if (read_file) {
-	    FMFieldList fields = NULL;
 	    FMContext c = create_local_FMcontext();
 	    char *buf = read_buffer(c, read_file, test_num);
 	    param = (test_struct*)buf;
@@ -336,7 +333,6 @@ main(int argc, char **argv)
 	cod_assoc_externs(context, externs);
 	cod_parse_for_context(extern_string, context);
 	if (read_file) {
-	    FMFieldList fields = NULL;
 	    FMContext c = create_local_FMcontext();
 	    char *buf = read_buffer(c, read_file, test_num);
 	    param = (test_struct*)buf;
@@ -415,7 +411,6 @@ return testing;\n\
 	cod_assoc_externs(context, externs);
 	cod_parse_for_context(extern_string, context);
 	if (read_file) {
-	    FMFieldList fields = NULL;
 	    FMContext c = create_local_FMcontext();
 	    char *buf = read_buffer(c, read_file, test_num);
 	    param = (test_struct*)buf;

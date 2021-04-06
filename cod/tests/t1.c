@@ -336,7 +336,7 @@ int *dummy(int*p);";
 
 	cod_parse_context context = new_cod_parse_context();
 	cod_exec_context ec;
-	int i, j;
+	int i, j = 0;
 	double levels;
 	cod_code gen_code;
 	int *(*func)(), *result;
