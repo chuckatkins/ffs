@@ -49,7 +49,7 @@ char **argv;
     FFSBuffer encode_buffer;
     FMFormat first_rec_ioformat, second_rec_ioformat, third_rec_ioformat;
     FMFormat fourth_rec_ioformat, later_ioformat, nested_ioformat;
-    FMFormat fifth_rec_ioformat, triangle_ioformat;
+    FMFormat embedded_rec_ioformat, fifth_rec_ioformat, triangle_ioformat;
     FMStructDescRec str_list[5];
     char *xfer_buffer;
     int buf_size;
@@ -70,7 +70,6 @@ char **argv;
     struct visit_table v;
     FMFormat sixth_rec_ioformat, ninth_rec_ioformat, string_array_ioformat;
     FMFormat derive_ioformat, multi_array_ioformat, add_action_ioformat;
-    FMFormat node_ioformat;
 
     init_written_data();
 
@@ -139,6 +138,14 @@ char **argv;
     str_list[0].opt_info = NULL;
     str_list[1].format_name = NULL;
     fourth_rec_ioformat = register_data_format(src_context, str_list);
+
+    str_list[0].format_name = "embedded";
+    str_list[0].field_list = embedded_field_list;
+    str_list[0].struct_size = sizeof(embedded_rec);
+    str_list[0].opt_info = NULL;
+    str_list[1].format_name = NULL;
+    embedded_rec_ioformat = register_data_format(src_context, str_list);
+    (void) embedded_rec_ioformat;
 
     str_list[0].format_name = "structured array format";
     str_list[0].field_list = field_list5;
@@ -564,6 +571,7 @@ char **argv;
     str_list[0].struct_size = sizeof(struct node);
     str_list[0].opt_info = NULL;
     str_list[1].format_name = NULL;
+/*    FMFormat node_ioformat;
     node_ioformat = register_data_format(src_context, str_list);
 
     for (i = 0; i < sizeof(nodes)/sizeof(nodes[0]); i++) {
@@ -613,7 +621,7 @@ char **argv;
 					  &nodes[0], &buf_size);
     test_all_receive(xfer_buffer, buf_size, 0);
     write_buffer(node_ioformat, xfer_buffer, buf_size);
-    
+*/    
     free_FMcontext(src_context);
     free_FFSBuffer(encode_buffer);
     src_context = NULL;
