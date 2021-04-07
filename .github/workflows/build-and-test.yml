@@ -24,7 +24,8 @@ jobs:
       matrix:
         buildtype: [ release, debug ]
         os: [ centos7, centos8, ubuntu1604, ubuntu1804, ubuntu2004 ]
-        compiler: [ clang, gcc, nvhpc ]
+        #compiler: [ clang, gcc, nvhpc ]
+	compiler: [ clang, gcc ]
         exclude:
           - { os: centos8, compiler: nvhpc }
           - { os: ubuntu1604, compiler: nvhpc }
