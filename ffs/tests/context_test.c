@@ -66,8 +66,7 @@ char **argv;
     ninth_rec var_var;
     string_array_rec str_array;
     int i, j;
-    struct node nodes[10];
-    struct visit_table v;
+//    struct node nodes[10];
     FMFormat sixth_rec_ioformat, ninth_rec_ioformat, string_array_ioformat;
     FMFormat derive_ioformat, multi_array_ioformat, add_action_ioformat;
 
