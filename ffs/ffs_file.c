@@ -1313,7 +1313,6 @@ FILE_INT *file_int_ptr;
 #else
     Baaad shit;
 #endif
-    tmp_value = ntohl(tmp_value);
     *file_int_ptr = tmp_value;
     return 1;
 }
@@ -1584,7 +1583,7 @@ FFSFile ffsfile;
 		break;
 	default:
 	    printf("CORRUPT FFSFILE\n");
-	    exit(0);
+	    exit(1);
 	}
 	}
 	ffsfile->read_ahead = TRUE;
