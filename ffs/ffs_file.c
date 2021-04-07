@@ -1313,7 +1313,7 @@ FILE_INT *file_int_ptr;
 #else
     Baaad shit;
 #endif
-    ntohl(tmp_value);
+    tmp_value = ntohl(tmp_value);
     *file_int_ptr = tmp_value;
     return 1;
 }

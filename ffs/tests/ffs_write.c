@@ -480,7 +480,7 @@ main(int argc, char **argv)
 	    var_array.var_string_array[j].integer_field = 345 * j;
 	    var_array.var_string_array[j].short_field = j;
 	    var_array.var_string_array[j].long_field = 785 * j;
-	    var_array.var_string_array[j].string = malloc(15);
+	    var_array.var_string_array[j].string = malloc(20);
 	    sprintf(var_array.var_string_array[j].string,
 		    "substring%d", j);
 	    var_array.var_string_array[j].double_field = 3.1415 * j;
