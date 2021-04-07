@@ -435,6 +435,7 @@ return testing;\n\
 	gen_code = cod_code_gen(code, context);
 	func = (double (*)(test_struct_p))(long) gen_code->func;
 	assert((func)(param) == 46.00);
+	(void)func;
 	free(tmp.vals);
 	cod_code_free(gen_code);
 	cod_free_parse_context(context);
