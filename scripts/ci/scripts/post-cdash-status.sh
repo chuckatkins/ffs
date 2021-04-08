@@ -40,7 +40,7 @@ build_status_body() {
 cat <<EOF
 {
   "state": "success",
-  "target_url": "$(cdash_url GTKorvo FFS ${GH_SHA})",
+  "target_url": "$(cdash_url GTKorvo ATL ${GH_SHA})",
   "description": "Build and test results available on CDash",
   "context": "CDash"
 }
