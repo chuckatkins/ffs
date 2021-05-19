@@ -1568,6 +1568,7 @@ validate_and_copy_field_list(FMFieldList field_list, FMFormat fmformat)
 					     (field_count + 1));
     for (field = 0; field < field_count; field++) {
 	int field_size = 0;
+	int simple_string = 0;
 	if (strchr(field_list[field].field_type, '[') == NULL) {
 	    /* not an array */
 	    if (index(field_list[field].field_type, '*') == NULL) {
